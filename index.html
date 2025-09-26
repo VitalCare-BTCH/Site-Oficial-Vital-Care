@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitalCare - Triagem Rápida e Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <i data-feather="activity"></i>
+                <span>VitalCare</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#problema">Problema</a></li>
+                <li><a href="#solucao">Solução</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#como-funciona">Como Funciona</a></li>
+                <li><a href="#niveis-sus">Níveis do SUS</a></li>
+                <li><a href="#beneficios">Benefícios</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+            </ul>
+            <a href="#contato" class="cta-button">Fale Conosco <i data-feather="arrow-right"></i></a>
+        </nav>
+    </header>
+
+    <div class="background-gradient">
+        <div class="main-content-wrapper"> 
+            <main class="main-content">
+                <div class="hero-section">
+                    <h1>Triagem rápida e inteligente para a porta de entrada do SUS</h1>
+                    <p>O VitalCare é um sistema em formato de totem que automatiza o cadastro, coleta sinais vitais e aplica protocolos clínicos de triagem com precisão — reduzindo filas, organizando fluxos e apoiando profissionais.</p>
+                    <div class="hero-buttons">
+                        <a href="#como-funciona" class="btn btn-primary">Ver como funciona</a>
+                        <a href="#recursos" class="btn btn-secondary">Recursos</a>
+                    </div>
+                    <p class="tech-note">* Projeto com interface em <strong>Python</strong> para tela touchscreen e sensores integrados.</p>
+                </div>
+                <div class="team-section">
+                     <div class="team-card">
+                        <div class="team-header">
+                            <i data-feather="users"></i>
+                            <h2>Conheça a Equipe</h2>
+                        </div>
+                        <div class="team-members">
+                            <div class="member">
+                                <div class="member-avatar">
+                                    <img src="fernando.jpeg" alt="Foto de Fernando Meneguini">
+                                </div>
+                                <h3>Fernando Meneguini</h3>
+                                <p>Eng. Biomédico — desenvolvimento de hardware e integração de sensores.</p>
+                            </div>
+                            <div class="member">
+                                <div class="member-avatar">
+                                    <img src="guilherme.jpeg" alt="Foto de Guilherme Mendes">
+                                </div>
+                                <h3>Guilherme Mendes</h3>
+                                <p>Dev. Fullstack — backend, APIs e integração com sistemas.</p>
+                            </div>
+                            <div class="member">
+                                <div class="member-avatar">
+                                    <img src="laura.jpeg" alt="Foto de Laura Rita">
+                                </div>
+                                <h3>Laura Rita</h3>
+                                <p>Design de Produto — UI/UX e experiência do usuário.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="mentors-button">Orientadores</a>
+                        <p class="mentors-note">Clique em "Orientadores" para ver orientador e co-orientadora.</p>
+                    </div>
+                </div>
+            </main>
+        </div> 
+    </div>
+
+    <section class="problem-section" id="problema">
+        <div class="problem-content">
+            <h2>O obstáculo da triagem no SUS</h2>
+            <p>Filas longas, fluxo de entrada desorganizado e sobrecarga de profissionais tornam a porta de entrada dos hospitais um ambiente de insegurança e estresse. Atrasos no primeiro atendimento agravam quadros clínicos e comprometem vidas.</p>
+        </div>
+    </section>
+    
+    <section class="solution-section" id="solucao">
+        <div class="solution-content">
+            <h2>Nossa resposta: VitalCare</h2>
+            <p>Um <strong>totem de triagem automatizada</strong> para cadastro, aferição de sinais vitais e aplicação de protocolos clínicos. Não substitui o profissional — <strong>apoia</strong> com dados organizados, rapidez e segurança.</p>
+        </div>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <i data-feather="shield"></i>
+                <h3>Triagem segura</h3>
+                <p>Aplicação padronizada de protocolos com suporte à decisão.</p>
+            </div>
+            <div class="feature-card">
+                <i data-feather="calendar"></i>
+                <h3>Agendamentos</h3>
+                <p>Agende consultas e otimize o fluxo de atendimento.</p>
+            </div>
+            <div class="feature-card">
+                <i data-feather="git-merge"></i>
+                <h3>Integração</h3>
+                <p>Pronto para integrar com sistemas hospitalares e BI.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="resources-section" id="recursos">
+        <div class="resources-content">
+            <h2>Recursos principais</h2>
+        </div>
+        <div class="resource-cards">
+            <div class="resource-card">
+                <i data-feather="user-plus"></i>
+                <h3>Cadastro inteligente</h3>
+                <p>Coleta ágil de dados pessoais e queixa principal, com validações e LGPD em mente.</p>
+            </div>
+            <div class="resource-card">
+                <i data-feather="heart"></i>
+                <h3>Sinais vitais</h3>
+                <p>Batimentos, temperatura, oxigenação (SpO₂) e pressão arterial via sensores.</p>
+            </div>
+            <div class="resource-card">
+                <i data-feather="clipboard"></i>
+                <h3>Protocolos de triagem</h3>
+                <p>Aplicação de protocolos clínicos (ex.: Manchester) para priorização segura.</p>
+            </div>
+            <div class="resource-card">
+                <i data-feather="calendar"></i>
+                <h3>Agendamentos</h3>
+                <p>Agendar, confirmar e lembrar consultas para reduzir absenteísmo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works-section" id="como-funciona">
+        <div class="how-it-works-content">
+            <h2>Como funciona</h2>
+        </div>
+        <div class="step-cards">
+            <div class="step-card">
+                <span class="step-number">1</span>
+                <h3>Chegada</h3>
+                <p>Paciente se identifica no totem (documento ou QR).</p>
+            </div>
+            <div class="step-card">
+                <span class="step-number">2</span>
+                <h3>Coleta</h3>
+                <p>Sensores aferem sinais vitais de forma guiada.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-number">3</span>
+                <h3>Triagem</h3>
+                <p>Aplicação de protocolo e classificação de risco.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-number">4</span>
+                <h3>Encaminhamento</h3>
+                <p>Dados vão para o profissional e para o sistema.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sus-levels-section" id="niveis-sus">
+        <div class="sus-levels-content">
+            <h2>Adaptável aos diferentes níveis do SUS</h2>
+        </div>
+        <div class="level-cards">
+            <div class="level-card">
+                <i data-feather="map-pin"></i>
+                <h3>Atenção Primária (UBS)</h3>
+                <p>Organiza demanda espontânea, prioriza riscos e agiliza encaminhamentos.</p>
+            </div>
+            <div class="level-card">
+                <i data-feather="home"></i>
+                <h3>Atenção Secundária (UPA)</h3>
+                <p>Triagem mais rápida na urgência, reduzindo tempo porta-atendimento.</p>
+            </div>
+            <div class="level-card">
+                <i data-feather="shield"></i>
+                <h3>Atenção Terciária (Hospitais)</h3>
+                <p>Integração com protocolos hospitalares e gestão de leitos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section" id="beneficios">
+        <div class="benefits-content">
+            <h2>Benefícios</h2>
+        </div>
+        <div class="benefit-cards">
+            <div class="benefit-card">
+                <h3>Para pacientes</h3>
+                <p>Menos espera, triagem transparente e experiência mais segura.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Para profissionais</h3>
+                <p>Dados consolidados, priorização confiável e redução de sobrecarga.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Para gestores</h3>
+                <p>Indicadores em tempo real e melhor alocação de recursos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="roadmap-section" id="roadmap">
+        <div class="roadmap-content">
+            <h2>Roadmap do protótipo</h2>
+        </div>
+        <div class="roadmap-cards">
+            <div class="roadmap-card">
+                <h3>1. Design & Pesquisa</h3>
+                <ul>
+                    <li>Mapeamento de fluxo</li>
+                    <li>Arquitetura do totem</li>
+                    <li>UI touchscreen</li>
+                </ul>
+            </div>
+            <div class="roadmap-card">
+                <h3>2. Integração de Sensores</h3>
+                <ul>
+                    <li>Batimentos</li>
+                    <li>Temperatura</li>
+                    <li>SpO₂</li>
+                    <li>Pressão</li>
+                </ul>
+            </div>
+            <div class="roadmap-card">
+                <h3>3. Protocolos & Lógica</h3>
+                <ul>
+                    <li>Regras de triagem</li>
+                    <li>Classificação de risco</li>
+                    <li>Logs</li>
+                </ul>
+            </div>
+            <div class="roadmap-card">
+                <h3>4. Piloto & Métricas</h3>
+                <ul>
+                    <li>Teste em unidade</li>
+                    <li>Tempo porta</li>
+                    <li>Satisfação</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="contact-section" id="contato">
+        <h2>Vamos implementar o VitalCare?</h2>
+        <p>Fale com a equipe para parceria, implantação piloto ou demonstração.</p>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" rows="5" placeholder="Mensagem" required></textarea>
+            <button type="submit" class="btn btn-submit">Enviar interesse</button>
+        </form>
+        <p class="email-link">Ou envie um email para <a href="mailto:contato@vitalcare.app.br">contato@vitalcare.app.br</a></p>
+        <p class="copyright">© 2025 VitalCare. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

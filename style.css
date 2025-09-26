@@ -1,0 +1,566 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* GRADIENTE ANIMADO CONTÍNUO APLICADO DIRETAMENTE AO BODY */
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background-attachment: fixed; 
+
+    /* GRADIENTE COM TONS DE AZUL MAIS VIVOS */
+    background-image: linear-gradient(
+        120deg, 
+        #1f2b5b, /* Azul mais escuro, base */
+        #4639d5, /* Azul vibrante médio */
+        #0000CD, /* Azul mais claro e vivo */
+        #4169E1  /* Azul brilhante */
+    );
+    background-size: 400% 400%; /* Essencial para a animação do gradiente */
+    animation: gradient-animation 15s ease infinite; /* Animação contínua */
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Torna o cabeçalho semi-transparente para mostrar o fundo animado */
+    background-color: rgba(10, 25, 47, 0.85); /* Fundo semi-transparente do cabeçalho */
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(224, 225, 221, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    height: 80px;
+}
+
+/* Garante que o hero e todas as seções sejam transparentes para o fundo animado */
+.background-gradient,
+.main-content-wrapper,
+.problem-section,
+.solution-section,
+.resources-section,
+.how-it-works-section,
+.sus-levels-section,
+.benefits-section,
+.roadmap-section,
+.contact-section {
+    background-image: none !important; 
+    background-color: transparent !important; 
+    animation: none !important; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 4%; 
+}
+
+/* O .background-gradient inicial pode ser um wrapper para o main-content */
+.background-gradient { 
+    padding: 0 8%; 
+    margin-top: -80px; 
+    min-height: calc(100vh - 80px); 
+}
+
+.main-content-wrapper {
+    padding-top: 80px; 
+    min-height: 100vh; 
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo svg {
+    width: 28px;
+    height: 28px;
+    color: #e0e1dd; /* Cor clara para a logo */
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+.cta-button {
+    background-color: #993bc7; /* Cor clara para o CTA */
+    color: #FFFFFF; /* Cor escura para o texto do CTA */
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: #993bc7; /* Azul mais vivo no hover */
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    padding: 60px 0;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.hero-section {
+    flex-basis: 45%;
+    max-width: 550px;
+    text-align: left;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-section > p {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #7FFFD4; /* Cor clara para o botão primário */
+    color: #1f2b5b; /* Cor escura para o texto */
+}
+.btn-primary:hover {
+    background-color: #A3D8F5; /* Azul mais vivo no hover */
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.btn-secondary:hover {
+    background-color: rgba(163, 216, 245, 0.2); /* Um toque de azul vivo translúcido */
+    border-color: #A3D8F5; /* Borda com azul vivo */
+}
+
+.tech-note {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.team-section {
+    flex-basis: 50%;
+}
+
+.team-card {
+    background-color: rgba(42, 82, 133, 0.15); /* Azul com transparência para o card */
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(224, 225, 221, 0.2);
+}
+
+.team-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.team-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.member {
+    text-align: center;
+    flex: 1;
+}
+
+.member-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+}
+
+.member-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.member p {
+    font-size: 13px;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.mentors-button {
+    display: block;
+    width: 100%;
+    background-color: #7FFFD4; /* Cor clara para o botão de Orientadores */
+    color: #1f2b5b;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+.mentors-button:hover {
+    background-color: #A3D8F5; /* Azul mais vivo no hover */
+}
+
+.mentors-note {
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.problem-content {
+    max-width: 800px;
+}
+
+.problem-content h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.problem-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+.solution-content, .resources-content, .how-it-works-content, .sus-levels-content, .benefits-content, .roadmap-content {
+    text-align: center;
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.solution-content h2, .resources-content h2, .how-it-works-content h2, .sus-levels-content h2, .benefits-content h2, .roadmap-content h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.solution-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    opacity: 0.9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature-cards, .resource-cards, .step-cards, .level-cards, .benefit-cards, .roadmap-cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+.feature-card, .resource-card, .step-card, .level-card, .benefit-card, .roadmap-card {
+    background-color: rgba(42, 82, 133, 0.15); /* Azul com transparência para os cards */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(224, 225, 221, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: left;
+}
+
+.feature-card, .level-card, .benefit-card {
+    flex-basis: 300px;
+    flex-grow: 1;
+    max-width: 350px;
+}
+
+.resource-card, .roadmap-card {
+    flex-basis: 250px;
+    flex-grow: 1;
+    max-width: 280px;
+}
+
+.step-card {
+    flex-basis: 220px;
+    flex-grow: 1;
+    max-width: 260px;
+}
+
+.feature-card svg, .resource-card svg, .level-card svg {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 20px;
+    color: #993bc7; /* Azul vivo para os ícones */
+}
+
+.feature-card h3, .resource-card h3, .step-card h3, .level-card h3, .benefit-card h3, .roadmap-card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.feature-card p, .resource-card p, .step-card p, .level-card p, .benefit-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.step-number {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0.5;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.roadmap-card h3 {
+    margin-bottom: 25px;
+}
+
+.roadmap-card ul {
+    list-style: none;
+}
+
+.roadmap-card ul li {
+    font-size: 15px;
+    line-height: 1.8;
+    opacity: 0.8;
+    padding-left: 20px;
+    position: relative;
+}
+
+.roadmap-card ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #993bc7; /* Azul vivo para os marcadores de lista */
+}
+
+.roadmap-card ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.contact-section h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.contact-section > p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(42, 82, 133, 0.15); /* Azul com transparência para o formulário */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(224, 225, 221, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    background: rgba(10, 25, 47, 0.5); /* Fundo dos campos escuro semi-transparente */
+    border: 1px solid rgba(224, 225, 221, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    background-color: #993bc7; /* Cor clara para o botão de submit */
+    color: #0A192F;
+    font-size: 16px;
+    padding: 15px;
+}
+.btn-submit:hover {
+    background-color: #A3D8F5; /* Azul vivo no hover */
+    transform: translateY(-2px);
+}
+
+.email-link {
+    margin-top: 30px;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.email-link a {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 60px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+@media (max-width: 1200px) {
+    .navbar {
+        padding: 25px 4%;
+    }
+    .background-gradient {
+        padding: 0 4%;
+        margin-top: -80px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-links {
+        display: none; 
+    }
+    .main-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 0;
+    }
+    .hero-section {
+        max-width: 100%;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 36px;
+    }
+    .team-members {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .member-avatar {
+        width: 100px;
+        height: 100px;
+    }
+    .problem-content h2,
+    .solution-content h2,
+    .resources-content h2,
+    .how-it-works-content h2,
+    .sus-levels-content h2,
+    .benefits-content h2,
+    .roadmap-content h2,
+    .contact-section h2 {
+        font-size: 32px;
+    }
+    .problem-content p,
+    .solution-content p {
+        font-size: 16px;
+    }
+    .feature-card, .resource-card, .step-card, .level-card, .benefit-card, .roadmap-card {
+        text-align: center;
+    }
+    .roadmap-card ul li {
+        padding-left: 0;
+    }
+    .roadmap-card ul li::before {
+        display: none;
+    }
+    .contact-form {
+        padding: 30px;
+    }
+}
