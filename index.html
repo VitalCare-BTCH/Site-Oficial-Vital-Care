@@ -43,39 +43,62 @@
                     </div>
                     <p class="tech-note">* Projeto com interface em <strong>Python</strong> para tela touchscreen e sensores integrados.</p>
                 </div>
-                <div class="team-section">
-                     <div class="team-card">
-                        <div class="team-header">
-                            <i data-feather="users"></i>
-                            <h2>Conheça a Equipe</h2>
+<div class="team-section">
+    <div class="team-card">
+        <div class="team-header">
+            <i data-feather="users"></i>
+            <h2 id="team-title">Conheça a Equipe</h2>
+        </div>
+
+        <div class="team-slider-wrapper">
+            <div class="team-slider-container">
+                <div class="team-members">
+                    <div class="member">
+                        <div class="member-avatar">
+                            <img src="fernando.jpeg" alt="Foto de Fernando Meneguini">
                         </div>
-                        <div class="team-members">
-                            <div class="member">
-                                <div class="member-avatar">
-                                    <img src="fernando.jpeg" alt="Foto de Fernando Meneguini">
-                                </div>
-                                <h3>Fernando Meneguini</h3>
-                                <p>Eng. Biomédico — desenvolvimento de hardware e integração de sensores.</p>
-                            </div>
-                            <div class="member">
-                                <div class="member-avatar">
-                                    <img src="guilherme.jpeg" alt="Foto de Guilherme Mendes">
-                                </div>
-                                <h3>Guilherme Mendes</h3>
-                                <p>Dev. Fullstack — backend, APIs e integração com sistemas.</p>
-                            </div>
-                            <div class="member">
-                                <div class="member-avatar">
-                                    <img src="laura.jpeg" alt="Foto de Laura Rita">
-                                </div>
-                                <h3>Laura Rita</h3>
-                                <p>Design de Produto — UI/UX e experiência do usuário.</p>
-                            </div>
+                        <h3>Fernando Meneguini</h3>
+                        <p>Idealizador do Hardware - Arquitetura do protótipo.</p>
+                    </div>
+                    <div class="member">
+                        <div class="member-avatar">
+                            <img src="guilherme.jpeg" alt="Foto de Guilherme Mendes">
                         </div>
-                        <a href="#" class="mentors-button">Orientadores</a>
-                        <p class="mentors-note">Clique em "Orientadores" para ver orientador e co-orientadora.</p>
+                        <h3>Guilherme Mendes</h3>
+                        <p>Dev. Fullstack — Administração do Banco de Dados - Controle Financeiro.</p>
+                    </div>
+                    <div class="member">
+                        <div class="member-avatar">
+                            <img src="laura.jpeg" alt="Foto de Laura Rita">
+                        </div>
+                        <h3>Laura Rita</h3>
+                        <p>Dev. Fullstack — Documentação de Processos - Experiência do Usuário.</p>
                     </div>
                 </div>
+
+                <div class="team-mentors">
+                    <div class="member">
+                        <div class="member-avatar">
+                            <img src="https://placehold.co/100x100/EEE/31343C?text=Orientador" alt="Foto do Orientador">
+                        </div>
+                        <h3>Marcelus Guirardello</h3>
+                        <p>Orientador do Projeto</p>
+                    </div>
+                    <div class="member">
+                        <div class="member-avatar">
+                             <img src="https://placehold.co/100x100/EEE/31343C?text=Co-orientadora" alt="Foto da Co-orientadora">
+                        </div>
+                        <h3>Regina Kawakami</h3>
+                        <p>Co-orientadora do Projeto</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="mentors-button" id="toggle-team-button">Orientadores</button>
+        <p class="mentors-note" id="mentors-note">Clique em "Orientadores" para ver orientador e co-orientadora.</p>
+    </div>
+</div>
             </main>
         </div> 
     </div>
@@ -83,7 +106,7 @@
     <section class="problem-section" id="problema">
         <div class="problem-content">
             <h2>O obstáculo da triagem no SUS</h2>
-            <p>Filas longas, fluxo de entrada desorganizado e sobrecarga de profissionais tornam a porta de entrada dos hospitais um ambiente de insegurança e estresse. Atrasos no primeiro atendimento agravam quadros clínicos e comprometem vidas.</p>
+            <p>A triagem, primeira etapa do atendimento no Sistema Único de Saúde (SUS), está marcada por uma série de desafios que comprometem sua eficácia. Filas longas e um fluxo de entrada desorganizado geram um ambiente de constante sobrecarga para os profissionais. Essa situação resulta em estresse e insegurança generalizada, pois o atraso no primeiro atendimento e na correta classificação de risco tem consequências graves: pode agravar quadros clínicos que seriam facilmente controlados, elevando os custos do tratamento e, crucialmente, colocando vidas em risco.</p>
         </div>
     </section>
     
@@ -147,22 +170,22 @@
             <div class="step-card">
                 <span class="step-number">1</span>
                 <h3>Chegada</h3>
-                <p>Paciente se identifica no totem (documento ou QR).</p>
+                <p>Paciente realiza o cadastro no totem.</p>
             </div>
             <div class="step-card">
                 <span class="step-number">2</span>
                 <h3>Coleta</h3>
-                <p>Sensores aferem sinais vitais de forma guiada.</p>
+                <p>Seleção de sintomas e doenças pré-existentes.</p>
             </div>
             <div class="step-card">
                 <span class="step-number">3</span>
                 <h3>Triagem</h3>
-                <p>Aplicação de protocolo e classificação de risco.</p>
+                <p>Sensores aferem sinais vitais de forma guiada.</p>
             </div>
             <div class="step-card">
                 <span class="step-number">4</span>
                 <h3>Encaminhamento</h3>
-                <p>Dados vão para o profissional e para o sistema.</p>
+                <p>Aplicação do protocolo Manchester e envio de prontuário ao site geral.</p>
             </div>
         </div>
     </section>
@@ -175,17 +198,17 @@
             <div class="level-card">
                 <i data-feather="map-pin"></i>
                 <h3>Atenção Primária (UBS)</h3>
-                <p>Organiza demanda espontânea, prioriza riscos e agiliza encaminhamentos.</p>
+                <p>Organiza demanda espontânea, agendamento de consultas, prioriza riscos e agiliza encaminhamentos.</p>
             </div>
             <div class="level-card">
                 <i data-feather="home"></i>
                 <h3>Atenção Secundária (UPA)</h3>
-                <p>Triagem mais rápida na urgência, reduzindo tempo porta-atendimento.</p>
+                <p>Aferição de sinais vitais, seleção de sintomas e doenças e agilidade do atendimento.</p>
             </div>
             <div class="level-card">
                 <i data-feather="shield"></i>
                 <h3>Atenção Terciária (Hospitais)</h3>
-                <p>Integração com protocolos hospitalares e gestão de leitos.</p>
+                <p>Triagem mais rápida, reduzindo tempo porta-atendimento.</p>
             </div>
         </div>
     </section>
@@ -243,7 +266,7 @@
             <div class="roadmap-card">
                 <h3>4. Piloto & Métricas</h3>
                 <ul>
-                    <li>Teste em unidade</li>
+                    <li>Teste em feiras de técnologia</li>
                     <li>Tempo porta</li>
                     <li>Satisfação</li>
                 </ul>
@@ -251,18 +274,26 @@
         </div>
     </section>
 
-    <footer class="contact-section" id="contato">
-        <h2>Vamos implementar o VitalCare?</h2>
-        <p>Fale com a equipe para parceria, implantação piloto ou demonstração.</p>
-        <form class="contact-form">
-            <input type="text" name="name" placeholder="Seu nome" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" rows="5" placeholder="Mensagem" required></textarea>
-            <button type="submit" class="btn btn-submit">Enviar interesse</button>
-        </form>
-        <p class="email-link">Ou envie um email para <a href="mailto:contato@vitalcare.app.br">contato@vitalcare.app.br</a></p>
-        <p class="copyright">© 2025 VitalCare. Todos os direitos reservados.</p>
-    </footer>
+<footer class="contact-section" id="contato">
+    <h2>Vamos implementar o VitalCare?</h2>
+    <p>Fale com a equipe para parceria, implantação piloto ou demonstração.</p>
+    
+    <form class="contact-form" action="https://formsubmit.co/projetovitalcare@gmail.com" method="POST">
+        <input type="text" name="Nome" placeholder="Seu nome" required>
+        <input type="email" name="Email" placeholder="Email" required>
+        <textarea name="Mensagem" rows="5" placeholder="Mensagem" required></textarea>
+
+        <input type="hidden" name="_next" value=http://127.0.0.1:5500/obrigado.html">
+
+        <input type="hidden" name="_subject" value="Novo Contato do Site VitalCare!">
+        
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit" class="btn btn-submit">Enviar interesse</button>
+    </form>
+    <p class="email-link">Ou envie um email para <a href="mailto:projetovitalcare@gmail.com">projetovitalcare@gmail.com</a></p>
+    <p class="copyright">© 2025 VitalCare. Todos os direitos reservados.</p>
+</footer>
 
     <script src="script.js"></script>
 
