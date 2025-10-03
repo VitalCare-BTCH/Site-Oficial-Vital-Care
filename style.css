@@ -564,3 +564,52 @@ header {
         padding: 30px;
     }
 }
+.team-card {
+    /* Garante que o conteúdo que desliza não afete o layout */
+    position: relative;
+}
+
+.team-slider-wrapper {
+    /* A 'janela' por onde veremos o conteúdo. Esconde o que estiver fora. */
+    overflow: hidden;
+    width: 100%;
+}
+
+.team-slider-container {
+    /* Contêiner flexível com o dobro da largura para abrigar os dois slides */
+    display: flex;
+    width: 200%; 
+    /* Animação suave ao mover */
+    transition: transform 0.6s ease-in-out;
+}
+
+.team-members, .team-mentors {
+    /* Cada slide ocupa exatamente metade do contêiner (100% da área visível) */
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Alinha os cards na parte superior */
+    padding: 20px 0;
+    gap: 15px; /* Espaçamento entre os cards */
+}
+
+/* Classe que será adicionada/removida via JavaScript */
+.team-slider-container.show-mentors {
+    /* Desloca o contêiner para a esquerda em 50%, revelando o segundo slide */
+    transform: translateX(-50%);
+}
+
+.mentors-button {
+    /* Estilização básica para o botão parecer com o link anterior */
+    cursor: pointer;
+    border: none;
+    background-color: #7FFFD4; /* Cor de exemplo */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.mentors-button:hover {
+    background-color: #7FFFD4; /* Cor de exemplo */
+}
